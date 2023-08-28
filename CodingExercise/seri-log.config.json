@@ -4,7 +4,6 @@
     "MinimumLevel": {
       "Default": "Information"
     },
-    "Enrich": [ "FromLogContext", "WithMachineName", "WithProcessId", "WithThreadId" ],
     "WriteTo": [
       {
         "Name": "File",

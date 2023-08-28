@@ -1,5 +1,6 @@
 ﻿using CodingExercise.Interfaces;
 using CodingExercise.Models;
+using Newtonsoft.Json;
 
 namespace CodingExercise.Repositories
 {
@@ -16,6 +17,7 @@ namespace CodingExercise.Repositories
         {
             _logger.LogInformation("Saving Vehicle in Dummy Vehicle Repository");
             vehicle.Id = 1;
+            _logger.LogInformation("Vehicle saved {vehicle}", JsonConvert.SerializeObject(vehicle));
             return Task.FromResult(vehicle);
         }
     }

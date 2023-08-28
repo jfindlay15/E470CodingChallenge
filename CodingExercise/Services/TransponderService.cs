@@ -24,7 +24,7 @@ namespace CodingExercise.Services
                 var year = int.Parse(vehicle?.Year);
                 var transponderRepository = _transponderRepositoryFactory.GetTransponderRepository(year);
                 transponder = transponderRepository.Create(vehicle);
-                _logger.LogInformation("Transponder created {transponder}", JsonConvert.SerializeObject(transponder));
+                _logger.LogInformation("Transponder created and saved {transponder}", JsonConvert.SerializeObject(transponder));
             }
 
             return transponder;
